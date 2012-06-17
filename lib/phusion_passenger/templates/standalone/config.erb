@@ -54,7 +54,7 @@ http {
     <% end %>
     
     default_type application/octet-stream;
-    client_max_body_size 50m;
+    client_max_body_size <%= @options[:client_max_body_size].to_i > 0 ? @options[:client_max_body_size].to_i.to_s : 50.to_s %>;
     access_log off;
     keepalive_timeout 60;
     gzip on;

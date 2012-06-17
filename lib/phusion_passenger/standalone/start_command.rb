@@ -151,7 +151,13 @@ private
 				wrap_desc("The spawn method to use (default: #{@options[:spawn_method]})")) do |value|
 				@options[:spawn_method] = value
 			end
-			opts.on("--union-station-gateway HOST:PORT", String,
+			opts.separator ""
+      opts.on("--client-max-body-size SIZE", String,
+			  wrap_desc("Maximum client body size (in M)")) do |value|
+			  @options[:client_max_body_size] = value
+		  end
+      opts.separator ""
+      opts.on("--union-station-gateway HOST:PORT", String,
 				wrap_desc("Specify Union Station Gateway host and port")) do |value|
 				host, port = value.split(":", 2)
 				port = port.to_i
