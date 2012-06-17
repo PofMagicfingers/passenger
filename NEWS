@@ -1,6 +1,11 @@
 Release 3.0.13
 --------------
 
+ * Added --client-max-body-size param for standalone passenger.
+
+Release 3.0.13
+--------------
+
  * [Nginx] Preferred Nginx version upgraded to 1.2.1.
  * Fixed compilation problems on FreeBSD 6.4. Fixes issue #766.
  * Fixed compilation problems on GCC >= 4.6.
